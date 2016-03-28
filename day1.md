@@ -57,3 +57,15 @@ Some cons:
 * Team that goes around fixing flaky tests :-)
 * Highly technical PO's
 * Two hackweeks per year
+* Humble leadership
+* Flat consensus driven people (swedish)
+* Hire globally
+* Take away all excuse for you not succeed
+
+
+## How?
+
+* Trust your teams
+* Serve your teams
+* Empower your teams
+* Then get out of their way :-)
