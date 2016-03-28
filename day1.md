@@ -69,3 +69,36 @@ Some cons:
 * Serve your teams
 * Empower your teams
 * Then get out of their way :-)
+
+
+# Microservices with moip
+
+* moip v2
+* monolith saving all in my.sql
+* need of high availability
+* lack of orthogonality, generating reports made payment to stop working
+* this is not awesome on black friday :-)
+* microservices helped them get orthogonality
+* better resilience, locks and outages are localized, not global
+* incremental approach, one service at a time being extracted from the monolith
+* easier to test
+
+
+## Challenges
+
+* Handling failures
+* High latency (chatty APIs)
+* Handling eventual consistency
+* Use sampling comparing my.sql and elasticsearch to check for consistency
+* monitoring: sentry
+* easy to test is isolation, harder to test end to end
+* monitoring: statsd, graphite, librato, ELK
+* devops: infrastructure as code
+* automate everything
+* devs fazem deploy em PROD
+* use containers to close dev <-> prod gap
+
+
+## Questions
+
+* How much time took the full migration ?
