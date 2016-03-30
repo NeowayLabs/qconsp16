@@ -1,4 +1,4 @@
-# Dude talking about lambda
+# The future of your production environment is serverless
 
 
 Lambda seems pretty magic to run stuff, already handles autoscaling.
@@ -11,7 +11,7 @@ Some cons:
 * Support to few languages only (no golang :-()
 
 
-# The Spotify Playlist
+# The Spotify Playbook
 
 
 ## Struggles
@@ -71,7 +71,8 @@ Some cons:
 * Then get out of their way :-)
 
 
-# Microservices with moip
+# Microservices: aumentando a resiliencia na moip
+
 
 * moip v2
 * monolith saving all in my.sql
@@ -102,3 +103,63 @@ Some cons:
 ## Questions
 
 * How much time took the full migration ?
+
+
+# Shopify at scale
+
+Infrastructure and development platform
+
+
+## Infrastructure
+
+* Each shop is isolated from others (each one is a pod)
+* It is NOT a Kubernetes pod
+* They share the workers to avoid having to pre allocate resources
+* Lua nginx module :D
+* Proxy scheme like kubernetes :-), but on domain level
+
+
+## Development
+
+
+* Fallbacks: go to a degraded functionality, instead of breaking/exploding
+* Orthogonality: One service cant bring everything down
+* Make it easier to do the right thing, and hard to do the wrong one
+* Resiliency matrix
+* Talked a lot about the benefits of using a tool like toxyproxy
+* Better than mocking since it acts on TCP level, uncovers lots of integration problems
+* BuildKite, ShipIt
+* No QA (code reviews + testing + incremental changes)
+* No releases
+* Devs deploy on first day
+* 10m from merge to deploy
+* Setting up development environment = one command
+* Define load SLA
+* Load test tool: Genghis
+* Prove your load SLA
+
+
+# Elixir: tolerancia a falhas para adultos
+
+
+* Moore law is no longer a low
+* We have to leverage machine paralelism
+* Here enters the old and good Erlang machine
+* Talks a lot about how it thinks that multithreading stinks
+* Talks about how event loops also stinks (check out papers)
+* Erlang is pretty old and robust to build concurrent systems
+* Erlang has green threads, each green thread has its own independent garbage collector
+
+
+## Elixir highlights
+
+* Pattern matching (function call, assignments, everywhere, reminds me of prolog)
+* Pipelining of function calls
+* Purely functional language, with immutability
+* Seems to have good tooling already
+
+
+## Papers
+
+* [The problem with threads](http://www.eecs.berkeley.edu/Pubs/TechRpts/2006/EECS-2006-1.pdf)
+* [Why events are a bad idea](http://www.cs.berkeley.edu/~brewer/papers/threads-hotos-2003.pdf)
